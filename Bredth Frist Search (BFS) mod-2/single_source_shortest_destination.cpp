@@ -43,8 +43,9 @@ int main()
     cin>>src>>dst;
     bfs(src);
     
-    for(int i =0; i<n;i++){
-        cout<<i<<"-> "<<level[i]<<endl;
-    }
+    // for(int i =0; i<n;i++){
+    //     cout<<i<<"-> "<<level[i]<<endl;
+    // }
+    cout<<level[dst];
     return 0;
 }
