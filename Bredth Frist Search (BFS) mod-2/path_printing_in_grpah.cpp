@@ -45,12 +45,17 @@ int main()
     int src,dst;
     cin>>src>>dst;
     bfs(src);
-    
+
+    vector<int>path;
     int node = dst;
     while(node!=-1)
     {
-        cout<<node<<" ";
+        path.push_back(node);
         node = parent[node];
+    }
+    reverse(path.begin(),path.end());
+    for(int x:path){
+        cout<<x<<" ";
     }
     return 0;
 }
