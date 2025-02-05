@@ -25,15 +25,17 @@ void bfs(int si,int sj)
         q.pop();
         int par_i = par.first;
         int par_j = par.second;
-
+        // cout<<par_i<<" "<<par_j<<endl;
         for(int i =0; i<4;i++)
         {
             int ci = par_i + d[i].first;
             int cj = par_j + d[i].second;
-            if(isVaild(ci,cj) && !vis[ci][cj] && grid[ci][cj]=='.' )
+            if(isVaild(ci,cj) && !vis[ci][cj] && grid[ci][cj]=='.' ){
                 q.push({ci,cj});
                 vis[ci][cj] = true;
                 level[ci][cj] = level[par_i][par_j] +1;
+                cout<<level[ci][cj]<<" "<< ci<<" "<<cj<<endl;
+            }
         }
     }
 }
