@@ -13,8 +13,8 @@ void dfs(int src)
             cycle = true;
         }
         if(!vis[child]){
+            parent[child] = src; 
             dfs(child);
-            parent[child] = src; // we keep track parent this is main logic
         }
     }
 }
