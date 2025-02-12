@@ -9,6 +9,9 @@ void dfs(int src)
 {
     vis[src] = true;
     for(auto child:adj_list[src]){
+        if(vis[child] && parent[src] !=child){
+            cycle = true;
+        }
         if(!vis[child]){
             dfs(child);
             parent[child] = src; // we keep track parent this is main logic
