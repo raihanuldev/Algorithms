@@ -40,7 +40,7 @@ int main()
         int a,b,c;
         cin>>a>>b>>c;
         adj_list[a].push_back({b,c});
-        adj_list[b].push_back({a,c});
+        adj_list[b].push_back({a,c}); //uncommit this for undreicred
     }
     for(int i =0; i<n;i++)
         dis[i] = INT_MAX;
