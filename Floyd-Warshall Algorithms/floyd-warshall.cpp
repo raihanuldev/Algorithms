@@ -22,6 +22,17 @@ int main()
         //this for undrirected grpah
         // adj_mat[b][a] = c;
     }
+
+    for(int k =0; k<n; k++){
+        for(int i =0; i<n;i++){
+            for(int j =0; j<n;j++){
+                if(adj_mat[i][k]!=INT_MAX && adj_mat[k][j]!=INT_MAX && adj_mat[i][k] + adj_mat[k][j] < adj_mat[i][j]){
+                    adj_mat[i][j] = adj_mat[i][k] + adj_mat[k][j];
+                }
+            }
+        }
+    }
+
     for(int i =0; i<n;i++){
         for(int j =0; j<n;j++){
             if(adj_mat[i][j]==INT_MAX){
