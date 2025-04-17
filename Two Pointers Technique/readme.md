@@ -43,3 +43,13 @@ bool findPair(vector<int>& arr, int target) {
     return false;
 }
 ```
+
+
+some problems about two-pointer
+Find the closest pair from two sorted arrays
+Find the pair in array whose sum is closest to x
+Find all triplets with zero sum
+Find a triplet that sum to a given value
+Find a triplet such that sum of two equals to third element
+Find four elements that sum to a given value
+Trapping Rain Water
